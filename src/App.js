@@ -1,9 +1,22 @@
-import './App.css';
+import "./App.css";
+import Home from "./screens/Home";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import Login from "./screens/Login";
 
 function App() {
   return (
-    <div className='fs-1'>Hello World </div>
-    
+    <Router>
+      <div>
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/login" element={<Login/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
